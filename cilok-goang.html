@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cilok Goang Ona - SAGARA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --burgundy: #58191E;
+            --rosewood: #281A17;
+            --beige: #F2E4D0;
+            --beige-light: #faf5ee;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--beige); color: var(--rosewood); line-height: 1.6; }
+        
+        /* Navbar Simple */
+        header {
+            background-color: var(--burgundy);
+            padding: 15px 50px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(40, 26, 23, 0.2);
+        }
+        .back-btn {
+            color: var(--beige);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+        .back-btn:hover { color: #d1b8a5; }
+
+        /* Konten Detail */
+        .detail-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--beige-light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(40, 26, 23, 0.1);
+            border: 1px solid rgba(40, 26, 23, 0.1);
+        }
+        .detail-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background-color: var(--beige);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--rosewood);
+            font-size: 50px;
+        }
+        .detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .detail-content { padding: 40px; }
+        .detail-content h1 {
+            color: var(--burgundy);
+            font-size: 36px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .detail-meta {
+            color: var(--rosewood);
+            font-size: 14px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(88, 25, 30, 0.2);
+            padding-bottom: 20px;
+            font-weight: 600;
+        }
+        .detail-content h2 {
+            color: var(--burgundy);
+            font-size: 22px;
+            margin: 30px 0 15px 0;
+            border-left: 5px solid var(--burgundy);
+            padding-left: 15px;
+        }
+        .detail-content h3 {
+            color: var(--burgundy);
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+        }
+        .detail-content p {
+            font-size: 15px;
+            margin-bottom: 15px;
+            color: var(--rosewood);
+            text-align: justify;
+        }
+        .detail-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: var(--rosewood);
+            font-size: 15px;
+        }
+        .detail-content ul li {
+            margin-bottom: 8px;
+        }
+        .detail-content strong {
+            color: var(--burgundy);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            .detail-container { margin: 20px 10px; }
+            .detail-content { padding: 20px; }
+            .detail-content h1 { font-size: 28px; }
+            .detail-image { height: 250px; }
+        }
+        /* --- ANIMASI FADE IN / OUT --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        body.fade-out {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Tombol kembali ke halaman utama -->
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+        </a>
+    </header>
+
+    <div class="detail-container">
+        <!-- Ganti gambar di bawah ini sesuai nama file di folder img -->
+        <div class="detail-image">
+            <img src="img/goang.jpg" alt="Cilok Goang Ona" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-image\'></i>';">
+        </div>
+        
+        <div class="detail-content">
+            <h1>Cilok Goang Ona</h1>
+            <div class="detail-meta">Sejarah · Bahan Baku · Informasi Kuliner</div>
+            
+            <h2>SEJARAH</h2>
+            <p>Cilok Goang merupakan salah satu jajanan tradisional yang berkembang di wilayah Tasikmalaya, Jawa Barat. Makanan ini merupakan pengembangan dari cilok, yaitu makanan berbahan dasar aci atau tepung tapioka yang dibentuk bulat dan dimasak dengan cara direbus.</p>
+            <p>Nama cilok berasal dari singkatan bahasa Sunda, yaitu <em>aci dicolok</em>, yang menggambarkan cara memakan cilok menggunakan tusuk. Sementara itu, istilah <em>goang</em> merujuk pada sambal khas Sunda yang dibuat dari cabai rawit yang diulek bersama garam dan bumbu lainnya.</p>
+            <p>Salah satu usaha kuliner yang mengembangkan hidangan ini adalah Cilok Goang Ona, yang berlokasi di kawasan Cikalang, Kecamatan Tawang, Kota Tasikmalaya. Berdasarkan dokumen identifikasi UMKM, usaha ini dirintis pada tahun 2014 oleh Ibu Herni Herniati.</p>
+            <p>Ciri khas Cilok Goang Ona terletak pada perpaduan cilok kenyal dengan kuah bercita rasa pedas dan gurih. Penyajiannya dilengkapi dengan tahu, tulang ayam, serta pilihan tambahan seperti ceker dan sayap ayam. Tingkat kepedasannya juga dapat disesuaikan dengan selera konsumen.</p>
+            
+            <h2>BAHAN BAKU ENDOGEN</h2>
+            <p>Bahan baku endogen merupakan bahan pangan yang berasal dari potensi sumber daya alam, pertanian, peternakan, dan hasil pengolahan pangan lokal yang dapat dimanfaatkan untuk menghasilkan produk kuliner daerah.</p>
+            <p>Pada Cilok Goang Ona, bahan baku utamanya berkaitan dengan pemanfaatan singkong sebagai sumber tepung tapioka, hasil peternakan ayam, serta rempah-rempah yang banyak digunakan dalam tradisi kuliner masyarakat Sunda.</p>
+            <p>Tepung tapioka merupakan hasil pengolahan pati singkong. Dalam tradisi kuliner masyarakat Sunda, aci telah banyak dimanfaatkan untuk membuat berbagai makanan seperti cilok, cireng, cimol, dan aci goreng. Tepung ini menghasilkan tekstur kenyal yang menjadi karakteristik utama cilok.</p>
+
+            <h2>INFORMASI KULINER CILOK GOANG ONA</h2>
+            
+            <h3>A. Profil Usaha</h3>
+            <p>Cilok Goang Ona merupakan salah satu usaha mikro, kecil, dan menengah (UMKM) di bidang makanan ringan yang berlokasi di kawasan Cikalang, Kecamatan Tawang, Kota Tasikmalaya. Usaha ini dirintis pada tahun 2014 oleh Ibu Herni Herniati.</p>
+            <p>Keberadaan Cilok Goang Ona menjadi salah satu bentuk pengembangan jajanan berbahan dasar aci yang memiliki karakteristik cita rasa khas Sunda. Usaha ini melayani konsumen secara langsung maupun melalui pemesanan daring.</p>
+            
+            <h3>B. Menu dan Ciri Khas</h3>
+            <p>Menu utama yang ditawarkan adalah cilok goang dengan perpaduan cilok kenyal, tahu, tulang ayam, serta kuah berbumbu dengan cita rasa pedas dan gurih.</p>
+            <p>Beberapa pilihan menu yang tersedia antara lain:</p>
+            <ul>
+                <li><strong>Goang 1:</strong> Cilok, tahu, dan tulang ayam.</li>
+                <li><strong>Goang 2:</strong> Cilok, tahu, tulang ayam, dan ceker.</li>
+                <li><strong>Goang 3:</strong> Cilok, tahu, tulang ayam, dan sayap ayam.</li>
+                <li><strong>Goang 4:</strong> Cilok, tahu, tulang ayam, ceker, dan sayap ayam.</li>
+            </ul>
+            <p>Pengunjung juga dapat memilih tingkat kepedasan, mulai dari tanpa sambal hingga beberapa level pedas. Selain menu utama, tersedia kerupuk mi, nasi putih, serta minuman seperti es teh, Pop Ice, dan Nutrisari.</p>
+            
+            <h3>C. Alamat dan Kontak Usaha</h3>
+            <ul>
+                <li><strong>Nama usaha:</strong> Cilok Goang Ona</li>
+                <li><strong>Pemilik:</strong> Herni Herniati</li>
+                <li><strong>Alamat:</strong> Jl. Cikalang Girang, Jembatan Cimulu, Kelurahan Kahuripan, Kecamatan Tawang, Kota Tasikmalaya, Jawa Barat.</li>
+                <li><strong>Nomor telepon/WhatsApp:</strong> 0852-2240-0111</li>
+                <li><strong>Kategori usaha:</strong> Makanan ringan / jajanan tradisional.</li>
+                <li><strong>Jam operasional:</strong> Tercatat sekitar pukul 10.00–21.00 WIB, dengan variasi jam pada beberapa hari.</li>
+                <li><strong>Instagram:</strong> @cilok_goang_ona</li>
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+</html>

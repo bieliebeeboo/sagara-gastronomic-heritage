@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasi Tutug Oncom Benhil - SAGARA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --burgundy: #58191E;
+            --rosewood: #281A17;
+            --beige: #F2E4D0;
+            --beige-light: #faf5ee;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--beige); color: var(--rosewood); line-height: 1.6; }
+        
+        /* Navbar Simple */
+        header {
+            background-color: var(--burgundy);
+            padding: 15px 50px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(40, 26, 23, 0.2);
+        }
+        .back-btn {
+            color: var(--beige);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+        .back-btn:hover { color: #d1b8a5; }
+
+        /* Konten Detail */
+        .detail-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--beige-light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(40, 26, 23, 0.1);
+            border: 1px solid rgba(40, 26, 23, 0.1);
+        }
+        .detail-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background-color: var(--beige);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--rosewood);
+            font-size: 50px;
+        }
+        .detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .detail-content { padding: 40px; }
+        .detail-content h1 {
+            color: var(--burgundy);
+            font-size: 36px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .detail-meta {
+            color: var(--rosewood);
+            font-size: 14px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(88, 25, 30, 0.2);
+            padding-bottom: 20px;
+            font-weight: 600;
+        }
+        .detail-content h2 {
+            color: var(--burgundy);
+            font-size: 22px;
+            margin: 30px 0 15px 0;
+            border-left: 5px solid var(--burgundy);
+            padding-left: 15px;
+        }
+        .detail-content h3 {
+            color: var(--burgundy);
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+        }
+        .detail-content p {
+            font-size: 15px;
+            margin-bottom: 15px;
+            color: var(--rosewood);
+            text-align: justify;
+        }
+        .detail-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: var(--rosewood);
+            font-size: 15px;
+        }
+        .detail-content ul li {
+            margin-bottom: 8px;
+        }
+        .detail-content strong {
+            color: var(--burgundy);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; }
+            .detail-container { margin: 20px 10px; }
+            .detail-content { padding: 20px; }
+            .detail-content h1 { font-size: 28px; }
+            .detail-image { height: 250px; }
+        }
+        /* --- ANIMASI FADE IN / OUT --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        body.fade-out {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Tombol kembali ke halaman utama -->
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+        </a>
+    </header>
+
+    <div class="detail-container">
+        <!-- Ganti gambar di bawah ini sesuai nama file di folder img -->
+        <div class="detail-image">
+            <img src="img/tutug.jpg" alt="Nasi Tutug Oncom Benhil" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-image\'></i>';">
+        </div>
+        
+        <div class="detail-content">
+            <h1>Nasi Tutug Oncom Benhil</h1>
+            <div class="detail-meta">Sejarah & Filosofi · Bahan Baku · Informasi Kuliner</div>
+            
+            <h2>SEJARAH DAN FILOSOFI</h2>
+            <p>Nasi Tutug Oncom atau yang dikenal dengan sebutan Nasi TO merupakan salah satu makanan tradisional khas Tasikmalaya, Jawa Barat. Hidangan ini diperkirakan telah dikenal masyarakat sejak sekitar tahun 1940-an.</p>
+            <p>Pada awal kemunculannya, Nasi Tutug Oncom berkaitan dengan kondisi kesulitan ekonomi masyarakat. Pada masa tersebut, harga beras relatif sulit dijangkau oleh sebagian masyarakat. Oleh karena itu, masyarakat memiliki kreativitas untuk mencampurkan nasi dengan oncom agar makanan terlihat lebih banyak, mengenyangkan, dan tetap ekonomis.</p>
+            <p>Nama <em>tutug</em> berasal dari bahasa Sunda yang berarti menumbuk atau mencampurkan. Proses pembuatannya dilakukan dengan menumbuk atau menghaluskan oncom yang telah dibakar atau disangrai, kemudian mencampurkannya dengan nasi hangat.</p>
+            
+            <h2>BAHAN BAKU ENDOGEN</h2>
+            <p>Oncom merupakan produk pangan tradisional hasil fermentasi yang banyak digunakan dalam kuliner masyarakat Sunda, termasuk Nasi Tutug Oncom khas Tasikmalaya.</p>
+            <p>Bahan baku endogen oncom dapat dilihat dari pemanfaatan hasil samping pertanian dan pangan lokal yang tersedia di lingkungan masyarakat.</p>
+            <p>Bahan baku endogen utama oncom adalah bungkil kacang tanah dan ampas tahu. Keduanya merupakan hasil samping pengolahan pangan yang dapat dimanfaatkan kembali melalui proses fermentasi sehingga menghasilkan produk pangan bernilai ekonomi, seperti oncom yang digunakan dalam Nasi Tutug Oncom khas Tasikmalaya.</p>
+
+            <h2>INFORMASI KULINER NASI T.O. BENHIL 2.96</h2>
+            
+            <h3>A. Profil Tempat</h3>
+            <p>Nasi T.O. Benhil 2.96 merupakan salah satu tempat makan legendaris yang menyajikan Nasi Tutug Oncom khas Tasikmalaya. Usaha ini mulai beroperasi sejak tahun 1996 dan dikenal sebagai salah satu tujuan sarapan masyarakat maupun wisatawan yang berkunjung ke Tasikmalaya. Lokasinya berada di kawasan Dadaha, dekat dengan kompleks olahraga Dadaha dan kampus UPI Tasikmalaya.</p>
+            
+            <h3>B. Menu dan Ciri Khas</h3>
+            <p>Menu utamanya adalah nasi hangat yang dicampurkan dengan oncom berbumbu. Sajian ini dilengkapi sambal hijau, sambal merah, lalapan, serta pilihan gorengan seperti cipe, bala-bala, dan tempe goreng. Perpaduan tersebut menjadi salah satu ciri khas yang membuat Nasi TO Benhil dikenal oleh para penikmat kuliner lokal.</p>
+            
+            <h3>C. Alamat dan Kontak</h3>
+            <ul>
+                <li><strong>Nama usaha:</strong> Nasi T.O. Benhil 2.96</li>
+                <li><strong>Alamat:</strong> Jl. Dadaha, Kahuripan, Kec. Tawang, Kota Tasikmalaya, Jawa Barat 46124, Indonesia</li>
+                <li><strong>Nomor telepon:</strong> 0822-4355-1179</li>
+                <li><strong>Jam operasional:</strong> Terdapat informasi berbeda pada sejumlah sumber; salah satu laporan menyebut mulai berjualan pagi dan dapat tutup ketika dagangan habis. Sebaiknya konfirmasi sebelum berkunjung.</li>
+                <li><strong>Media sosial resmi:</strong> @t.o_benhil.2.96</li>
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+</html>

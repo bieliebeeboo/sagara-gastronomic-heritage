@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soto Ayam Pataruman - SAGARA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --burgundy: #58191E;
+            --rosewood: #281A17;
+            --beige: #F2E4D0;
+            --beige-light: #faf5ee;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--beige); color: var(--rosewood); line-height: 1.6; }
+        
+        /* Navbar Simple */
+        header {
+            background-color: var(--burgundy);
+            padding: 15px 50px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(40, 26, 23, 0.2);
+        }
+        .back-btn {
+            color: var(--beige);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+        .back-btn:hover { color: #d1b8a5; }
+
+        /* Konten Detail */
+        .detail-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--beige-light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(40, 26, 23, 0.1);
+            border: 1px solid rgba(40, 26, 23, 0.1);
+        }
+        .detail-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background-color: var(--beige);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--rosewood);
+            font-size: 50px;
+        }
+        .detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .detail-content { padding: 40px; }
+        .detail-content h1 {
+            color: var(--burgundy);
+            font-size: 36px;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .detail-meta {
+            color: var(--rosewood);
+            font-size: 14px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(88, 25, 30, 0.2);
+            padding-bottom: 20px;
+            font-weight: 600;
+        }
+        .detail-content h2 {
+            color: var(--burgundy);
+            font-size: 22px;
+            margin: 30px 0 15px 0;
+            border-left: 5px solid var(--burgundy);
+            padding-left: 15px;
+        }
+        .detail-content h3 {
+            color: var(--burgundy);
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+        }
+        .detail-content p {
+            font-size: 15px;
+            margin-bottom: 15px;
+            color: var(--rosewood);
+            text-align: justify;
+        }
+        .detail-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: var(--rosewood);
+            font-size: 15px;
+        }
+        .detail-content ul li {
+            margin-bottom: 8px;
+        }
+        .detail-content strong {
+            color: var(--burgundy);
+        }
+        /* --- ANIMASI FADE IN / OUT --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        body.fade-out {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Tombol kembali ke halaman utama -->
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+        </a>
+    </header>
+
+    <div class="detail-container">
+        <!-- Ganti gambar di bawah ini sesuai nama file di folder img -->
+        <div class="detail-image">
+            <img src="img/soto.jpg" alt="Soto Ayam Pataruman" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-image\'></i>';">
+        </div>
+        
+        <div class="detail-content">
+            <h1>Soto Ayam Pataruman</h1>
+            <div class="detail-meta">Sejarah · Bahan Baku · Informasi Kuliner</div>
+            
+            <h2>SEJARAH</h2>
+            <p>Soto Ayam Pataruman merupakan salah satu kuliner legendaris dari Kota Tasikmalaya, Jawa Barat. Kuliner ini dikenal melalui warung Soto Pataruman 23 yang berlokasi di Jalan Pataruman Nomor 23, Kota Tasikmalaya.</p>
+            <p>Berdasarkan sejumlah sumber, usaha Soto Ayam Pataruman telah berkembang sejak sekitar tahun 1960-an. Ada pula sumber yang menyebutkan bahwa usaha ini dirintis pada tahun 1958. Usaha tersebut dikenal sebagai kuliner keluarga yang resep dan cita rasanya dipertahankan secara turun-temurun.</p>
+            <p>Keunikan Soto Ayam Pataruman terletak pada penggunaan ayam kampung, kuah gurih berbahan santan kelapa, serta tambahan kacang kedelai goreng, bawang goreng, dan irisan daun bawang. Pilihan isiannya juga beragam, mulai dari dada, paha, ceker, kulit, kepala, hingga ati ampela ayam.</p>
+            
+            <h2>BAHAN BAKU ENDOGEN</h2>
+            <p>Bahan baku endogen merupakan bahan pangan yang berasal dari potensi sumber daya alam dan hasil pertanian lokal yang dapat dimanfaatkan masyarakat untuk menghasilkan produk kuliner daerah.</p>
+            <p>Pada Soto Ayam Pataruman, bahan baku endogen dapat ditelusuri melalui pemanfaatan peternakan ayam, hasil perkebunan kelapa, komoditas pertanian, serta rempah-rempah yang telah lama digunakan dalam tradisi kuliner masyarakat Sunda.</p>
+
+            <h2>INFORMASI KULINER</h2>
+            
+            <h3>A. Profil Usaha</h3>
+            <p>Soto Ayam Pataruman 23 merupakan salah satu destinasi gastronomi legendaris di Kota Tasikmalaya yang dikenal dengan sajian soto ayam kampung berkuah santan. Usaha ini telah berkembang sejak sekitar tahun 1960-an dan mempertahankan karakteristik cita rasa tradisionalnya dari generasi ke generasi. Keberadaannya menjadi salah satu daya tarik wisata kuliner bagi masyarakat lokal maupun pengunjung dari luar daerah.</p>
+            
+            <h3>B. Menu dan Ciri Khas</h3>
+            <p>Menu utama yang ditawarkan adalah soto ayam dengan pilihan bagian ayam yang beragam, seperti dada, paha, ceker, kulit, kepala, ati ampela, dan bagian lainnya. Sajian ini memiliki ciri khas kuah gurih berbahan santan yang dipadukan dengan ayam kampung, kacang kedelai goreng, bawang goreng, serta irisan daun bawang. Pengunjung juga dapat menyesuaikan pilihan bagian ayam sesuai selera.</p>
+            
+            <h3>C. Alamat dan Kontak Usaha</h3>
+            <ul>
+                <li><strong>Nama usaha:</strong> Soto Ayam Pataruman 23</li>
+                <li><strong>Alamat:</strong> Jalan Pataruman No. 23, kawasan Yudanagara, Kecamatan Cihideung, Kota Tasikmalaya, Jawa Barat.</li>
+                <li><strong>Nomor telepon:</strong> 0813-2317-7720</li>
+                <li><strong>Instagram:</strong> @sotoayampataruman_23</li>
+                <li><strong>Jam operasional:</strong> Setiap hari, pukul 06.00–20.00 WIB.</li>
+                <li><strong>Kategori usaha:</strong> Rumah makan tradisional / kuliner khas daerah.</li>
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+</html>
