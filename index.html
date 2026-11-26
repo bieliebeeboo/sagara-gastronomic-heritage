@@ -1,665 +1,1596 @@
 <!DOCTYPE html>
+
 <html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SAGARA - Gastronomic Heritage Tasikmalaya</title>
+
     <!-- Import Font Google -->
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&family=Playfair+Display:ital,wght@0,600;0,700;1,700&display=swap" rel="stylesheet">
+
     <!-- Import Ikon -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+
+
     <style>
+
         /* --- CSS VARIABEL & RESET --- */
+
         :root {
-            --dark-green: #234b3f;
-            --light-green: #365f51;
-            --cream: #e8dcc8;
-            --beige: #dccba8;
-            --text-dark: #333;
-            --text-light: #f4f4f4;
+
+            --burgundy: #58191E;
+
+            --rosewood: #281A17;
+
+            --beige: #F2E4D0;
+
+            --burgundy-dark: #3d1014;
+
+            --beige-light: #faf5ee;
+
         }
+
+
 
         * {
+
             margin: 0;
+
             padding: 0;
+
             box-sizing: border-box;
+
             font-family: 'Poppins', sans-serif;
+
         }
 
+
+
         body {
-            background-color: var(--cream);
-            color: var(--text-dark);
+
+            background-color: var(--beige);
+
+            color: var(--rosewood);
+
             overflow-x: hidden;
+
         }
+
+
 
         a { text-decoration: none; color: inherit; }
 
+
+
         /* --- NAVBAR --- */
+
         header {
-            background-color: var(--dark-green);
-            color: white;
+
+            background-color: var(--burgundy);
+
+            color: var(--beige);
+
             padding: 15px 50px;
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+            box-shadow: 0 4px 6px rgba(40, 26, 23, 0.2);
+
         }
+
+
 
         .logo-container {
+
             display: flex;
+
             align-items: center;
+
             gap: 15px;
+
         }
 
-        .logo-box {
-            background-color: var(--cream);
-            color: var(--dark-green);
-            font-weight: 700;
-            font-size: 24px;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 8px;
+
+
+        .logo-img {
+
+            width: 55px;
+
+            height: 55px;
+
+            object-fit: contain;
+
+            background-color: transparent;
+
+            border-radius: 0;
+
         }
+
+
 
         .logo-text h1 {
+
             font-size: 20px;
+
             font-weight: 700;
+
             line-height: 1.2;
+
             letter-spacing: 1px;
+
+            color: var(--beige);
+
         }
+
+
 
         .logo-text p {
+
             font-size: 10px;
+
             letter-spacing: 1px;
-            color: #c0d6cf;
+
+            color: #d1b8a5;
+
         }
+
+
 
         nav ul {
+
             display: flex;
+
             list-style: none;
+
             gap: 30px;
+
         }
+
+
 
         nav ul li a {
+
             font-size: 14px;
+
             font-weight: 600;
+
             transition: color 0.3s;
+
+            color: var(--beige);
+
         }
+
+
 
         nav ul li a:hover {
-            color: var(--beige);
+
+            color: #d1b8a5;
+
         }
+
+
 
         /* --- HERO SECTION --- */
+
         .hero {
-            background-color: var(--beige);
-            background-image: url('img/hero-bg.jpg'); /* GANTI GAMBAR DI SINI */
+
+            background-image: url('img/banner.png'); 
+
             background-size: cover;
+
             background-position: center;
-            background-blend-mode: multiply; /* Membuat gambar menyatu dengan warna */
+
+            background-repeat: no-repeat;
+
             margin: 20px;
+
             border-radius: 15px;
-            height: 400px;
+
+            height: 400px; 
+
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
+
             align-items: center;
+
             text-align: center;
-            color: var(--dark-green);
+
+            color: var(--beige);
+
             position: relative;
+
+            box-shadow: 0 10px 20px rgba(40, 26, 23, 0.3);
+
+            overflow: hidden; 
+
         }
 
-        .hero h2 {
-            font-size: 48px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
 
-        .hero h3 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 14px;
-            margin-bottom: 25px;
-            color: #4a4a4a;
-        }
 
         .btn-primary {
-            background-color: var(--dark-green);
-            color: white;
+
+            background-color: var(--beige);
+
+            color: var(--burgundy);
+
             padding: 12px 30px;
+
             border-radius: 25px;
-            font-weight: 600;
+
+            font-weight: 700;
+
             border: none;
+
             cursor: pointer;
-            transition: background 0.3s;
+
+            transition: all 0.3s ease;
+
             font-size: 14px;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
         }
 
+
+
         .btn-primary:hover {
-            background-color: var(--light-green);
+
+            background-color: white;
+
+            transform: translateY(-2px);
+
+        }
+
+
+
+
+        /* --- TIPOGRAFI BANNER SAGARA --- */
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 20px;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(55px, 8vw, 90px);
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: 5px;
+            line-height: 1.1;
+            color: #F2E4D0;
+            text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.55);
+        }
+
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(19px, 2.5vw, 27px);
+            font-weight: 600;
+            font-style: italic;
+            letter-spacing: 1px;
+            color: #F2E4D0;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.55);
+        }
+
+        .hero-divider {
+            width: 85px;
+            border: 0;
+            border-top: 1px solid #D9C19A;
+            margin: 5px 0;
+        }
+
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(11px, 1.5vw, 15px);
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #E8D4B5;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
         }
 
         /* --- SECTION: PENGENALAN --- */
+
         .section-intro {
+
             text-align: center;
+
             padding: 40px 20px;
+
         }
+
+
 
         .section-intro h2 {
-            color: var(--dark-green);
+
+            color: var(--burgundy);
+
             font-size: 28px;
+
             margin-bottom: 10px;
+
         }
+
+
 
         .section-intro p {
-            color: #666;
+
+            color: var(--rosewood);
+
             font-size: 14px;
+
             max-width: 800px;
+
             margin: 0 auto;
+
         }
+
+
 
         /* --- SECTION: GALERI (JELAJAHI) --- */
+
         .gallery-section {
+
             padding: 20px 50px 60px 50px;
+
         }
+
+
 
         .gallery-section h2 {
+
             font-size: 22px;
+
             margin-bottom: 20px;
-            color: var(--dark-green);
+
+            color: var(--burgundy);
+
         }
+
+
 
         .grid-container {
+
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 20px;
+
         }
+
+
 
         .card {
-            background-color: #f9f9f9;
+
+            background-color: var(--beige-light);
+
             border-radius: 10px;
+
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+
+            box-shadow: 0 4px 10px rgba(40, 26, 23, 0.1);
+
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            border: 1px solid rgba(40, 26, 23, 0.1);
+
         }
+
+
 
         .card:hover {
+
             transform: translateY(-5px);
+
+            box-shadow: 0 8px 20px rgba(88, 25, 30, 0.2);
+
         }
+
+
 
         .card-img {
+
             height: 250px;
+
             background-color: var(--beige);
+
             width: 100%;
+
             object-fit: cover;
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
-            color: #888;
+
+            color: var(--rosewood);
+
             font-size: 40px;
+
         }
 
-        /* Jika gambar tidak ada, tampilkan placeholder */
+
+
         .card-img img {
+
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
+
         }
+
+
 
         .card-body {
+
             padding: 15px;
+
         }
+
+
 
         .card-body h3 {
-            color: var(--dark-green);
+
+            color: var(--burgundy);
+
             font-size: 18px;
+
             margin-bottom: 5px;
+
         }
+
+
 
         .card-body p {
+
             font-size: 12px;
-            color: #777;
+
+            color: var(--rosewood);
+
         }
 
-        /* --- SECTION: PETA --- */
-        .map-section {
-            background-color: var(--light-green);
-            padding: 50px 50px;
-            color: white;
-        }
 
-        .map-section h2 {
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
 
-        .map-section p {
-            font-size: 14px;
-            color: #c0d6cf;
-            margin-bottom: 20px;
-        }
+        /* --- SECTION: PETA DUA KOLOM --- */
 
-        .map-container {
-            background-color: var(--beige);
-            height: 400px;
-            border-radius: 15px;
+        .map-layout-section {
+
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: opacity 0.3s;
+
+            height: 600px; 
+
+            width: 100%;
+
+            background-color: var(--beige-light);
+
+            border-top: 2px solid var(--burgundy);
+
+            border-bottom: 2px solid var(--burgundy);
+
+        }
+
+
+
+        .map-side {
+
+            flex: 2; 
+
             position: relative;
+
             overflow: hidden;
-        }
-        
-        .map-container:hover {
-            opacity: 0.9;
+
+            border-right: 2px solid var(--burgundy);
+
         }
 
-        .map-icon {
-            font-size: 50px;
-            color: var(--dark-green);
-            margin-bottom: 10px;
+
+
+        .map-side iframe {
+
+            width: 100%;
+
+            height: calc(100% + 80px);
+
+            border: 0;
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            margin-top: -80px; 
+
         }
 
-        .map-text {
-            color: var(--dark-green);
+
+
+        .category-side {
+
+            flex: 1; 
+
+            padding: 30px;
+
+            overflow-y: auto; 
+
+            background-color: var(--beige-light);
+
+        }
+
+
+
+        .category-side h3 {
+
+            color: var(--burgundy);
+
+            font-size: 24px;
+
+            margin-bottom: 20px;
+
+            border-bottom: 2px solid var(--burgundy);
+
+            padding-bottom: 10px;
+
+        }
+
+
+
+        .category-list {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+
+        }
+
+
+
+        .category-item {
+
+            background-color: white;
+
+            padding: 15px 20px;
+
+            border-radius: 10px;
+
+            border: 1px solid rgba(40, 26, 23, 0.1);
+
+            text-decoration: none;
+
+            color: var(--rosewood);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            transition: all 0.3s ease;
+
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+        }
+
+
+
+        .category-item:hover {
+
+            transform: translateX(5px);
+
+            background-color: var(--burgundy);
+
+            color: var(--beige);
+
+            box-shadow: 0 4px 10px rgba(88, 25, 30, 0.3);
+
+        }
+
+
+
+        .category-item span {
+
             font-weight: 600;
+
             font-size: 16px;
-            letter-spacing: 1px;
+
         }
+
+
+
+        .category-item i {
+
+            font-size: 14px;
+
+        }
+
+
 
         /* --- SECTION: ULASAN --- */
+
         .review-section {
+
             padding: 50px;
-            background-color: #f4f0e6;
+
+            background-color: var(--beige);
+
         }
+
+
 
         .review-container {
-            background-color: white;
+
+            background-color: var(--beige-light);
+
             padding: 30px;
+
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+            box-shadow: 0 4px 15px rgba(40, 26, 23, 0.1);
+
             max-width: 800px;
+
             margin: 0 auto;
+
+            border: 1px solid rgba(40, 26, 23, 0.1);
+
         }
+
+
 
         .review-header h2 {
-            color: var(--dark-green);
+
+            color: var(--burgundy);
+
             font-size: 24px;
+
             margin-bottom: 5px;
+
         }
+
+
 
         .review-header p {
+
             font-size: 14px;
-            color: #777;
+
+            color: var(--rosewood);
+
             margin-bottom: 20px;
+
         }
+
+
 
         .review-form {
+
             display: flex;
+
             flex-direction: column;
+
             gap: 15px;
+
         }
+
+
 
         .stars-input {
+
             color: #d4af37;
+
             font-size: 20px;
+
             cursor: pointer;
+
         }
+
+
 
         .stars-input i {
+
             margin-right: 5px;
+
         }
+
+
 
         .review-form textarea {
+
             width: 100%;
+
             height: 100px;
+
             padding: 15px;
-            border: 1px solid #ddd;
+
+            border: 1px solid #d1b8a5;
+
             border-radius: 8px;
+
             resize: none;
+
             font-family: inherit;
+
+            background-color: white;
+
+            color: var(--rosewood);
+
         }
+
+
+
+        .review-form textarea:focus {
+
+            outline: none;
+
+            border-color: var(--burgundy);
+
+        }
+
+
 
         .btn-submit {
-            background-color: var(--dark-green);
-            color: white;
+
+            background-color: var(--burgundy);
+
+            color: var(--beige);
+
             padding: 15px;
+
             border: none;
+
             border-radius: 8px;
+
             font-weight: 600;
+
             cursor: pointer;
+
             transition: background 0.3s;
+
         }
+
+
 
         .btn-submit:hover {
-            background-color: var(--light-green);
+
+            background-color: var(--burgundy-dark);
+
         }
 
-        /* Tampilan Ulasan yang sudah masuk */
+
+
         .reviews-list {
+
             margin-top: 30px;
-            border-top: 1px solid #eee;
+
+            border-top: 1px solid rgba(40, 26, 23, 0.1);
+
             padding-top: 20px;
+
         }
+
+
 
         .review-item {
+
             margin-bottom: 15px;
+
             padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
+
+            border-bottom: 1px solid rgba(40, 26, 23, 0.1);
+
         }
+
+
 
         .review-item .stars {
+
             color: #d4af37;
+
             font-size: 14px;
+
             margin-bottom: 5px;
+
         }
+
+
 
         .review-item .text {
+
             font-size: 14px;
-            color: #444;
+
+            color: var(--rosewood);
+
         }
+
+        .review-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        .btn-delete-review {
+            background: transparent;
+            color: #8B292F;
+            border: 1px solid rgba(139, 41, 47, 0.35);
+            border-radius: 6px;
+            padding: 5px 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-delete-review:hover {
+            background: #8B292F;
+            color: #F2E4D0;
+        }
+
+
+
 
         /* --- FOOTER --- */
+
         footer {
-            background-color: var(--dark-green);
-            color: white;
+
+            background-color: var(--rosewood);
+
+            color: var(--beige);
+
             text-align: center;
+
             padding: 40px 20px;
+
         }
+
+
 
         footer h2 {
+
             font-size: 28px;
+
             letter-spacing: 2px;
+
             margin-bottom: 10px;
+
+            color: var(--beige);
+
         }
+
+
 
         footer p {
+
             font-size: 14px;
-            color: #c0d6cf;
+
+            color: #d1b8a5;
+
             margin-bottom: 5px;
+
         }
 
-        /* Tombol Scroll Down */
+
+
         .scroll-down {
+
             position: absolute;
+
             bottom: 20px;
-            background-color: #1a1a1a;
-            color: white;
+
+            background-color: var(--rosewood);
+
+            color: var(--beige);
+
             width: 40px;
+
             height: 40px;
+
             border-radius: 50%;
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
+
             cursor: pointer;
+
             animation: bounce 2s infinite;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
         }
+
+
 
         @keyframes bounce {
+
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+
             40% { transform: translateY(-10px); }
+
             60% { transform: translateY(-5px); }
+
         }
+
+
 
         /* Responsive */
+
         @media (max-width: 768px) {
+
             header { flex-direction: column; gap: 15px; padding: 15px; }
+
             nav ul { gap: 15px; font-size: 12px; }
+
             .grid-container { grid-template-columns: 1fr; }
-            .hero h2 { font-size: 32px; }
-            .hero h3 { font-size: 18px; }
-            .map-section, .review-section, .gallery-section { padding: 30px 20px; }
+
+            .hero { height: 250px; }
+
+
+
+            .map-layout-section {
+
+                flex-direction: column;
+
+                height: auto;
+
+            }
+
+            .map-side {
+
+                height: 400px;
+
+                border-right: none;
+
+                border-bottom: 2px solid var(--burgundy);
+
+            }
+
+            .category-side {
+
+                padding: 20px;
+
+            }
+
+            .review-section, .gallery-section { padding: 30px 20px; }
+
         }
+
+        /* --- ANIMASI FADE IN / OUT --- */
+
+        @keyframes fadeIn {
+
+            from { opacity: 0; transform: translateY(10px); }
+
+            to { opacity: 1; transform: translateY(0); }
+
+        }
+
+
+
+        body {
+
+            animation: fadeIn 0.6s ease-out forwards;
+
+        }
+
+
+
+        body.fade-out {
+
+            opacity: 0;
+
+            transform: translateY(-10px);
+
+            transition: opacity 0.4s ease, transform 0.4s ease;
+
+        }
+
     </style>
+
 </head>
+
 <body>
 
+
+
     <!-- NAVBAR -->
+
     <header>
+
         <div class="logo-container">
-            <div class="logo-box">S</div>
+
+            <img src="img/logo.jpg" alt="Logo SAGARA" class="logo-img">
+
             <div class="logo-text">
+
                 <h1>SAGARA</h1>
+
                 <p>GASTRONOMIC HERITAGE</p>
+
             </div>
+
         </div>
+
         <nav>
+
             <ul>
+
                 <li><a href="#beranda">BERANDA</a></li>
+
                 <li><a href="#jelajah">JELAJAH</a></li>
+
                 <li><a href="#peta">PETA</a></li>
+
                 <li><a href="#ulasan">ULASAN</a></li>
+
             </ul>
+
         </nav>
+
     </header>
 
+
+
     <!-- HERO SECTION (BERANDA) -->
+
     <section id="beranda" class="hero">
-        <h2>SAGARA</h2>
-        <h3>Menelusuri Jejak, Mengenal Rasa.</h3>
-        <p>Warisan Gastronomi Kabupaten Tasikmalaya</p>
-        <button class="btn-primary" onclick="document.getElementById('jelajah').scrollIntoView({behavior: 'smooth'})">JELAJAHI SEKARANG</button>
-        <div class="scroll-down" onclick="document.getElementById('intro').scrollIntoView({behavior: 'smooth'})">
-            <i class="fas fa-arrow-down"></i>
+        <div class="hero-content">
+            <h1 class="hero-title">SAGARA</h1>
+            <p class="hero-tagline">Menelusuri Jejak, Mengenal Rasa</p>
+            <hr class="hero-divider">
+            <p class="hero-subtitle">Warisan Gastronomi Kabupaten Tasikmalaya</p>
         </div>
+
+        <div class="scroll-down" onclick="document.getElementById('intro').scrollIntoView({behavior: 'smooth'})">
+
+            <i class="fas fa-arrow-down"></i>
+
+        </div>
+
     </section>
+
+
 
     <!-- SECTION PENGENALAN -->
+
     <section id="intro" class="section-intro">
+
         <h2>Mengenal Kekayaan Gastronomi</h2>
+
         <p>Menyusuri cerita, tradisi, dan cita rasa yang menjadi bagian dari identitas masyarakat Tasikmalaya.</p>
+
     </section>
+
+
 
     <!-- SECTION GALERI (JELAJAHI) -->
+
     <section id="jelajah" class="gallery-section">
+
         <h2>JELAJAHI WARISAN GASTRONOMI</h2>
+
         <div class="grid-container">
-            <!-- Card 1 -->
-            <div class="card">
+
+            <!-- target="_blank" SUDAH DIHAPUS -->
+
+            <a href="detail-citruk.html" class="card">
+
                 <div class="card-img">
-                    <!-- GANTI src DENGAN GAMBAR ANDA -->
-                    <img src="img/citruk.jpg" alt="Citruk" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-image\'></i>';">
+
+                    <img src="img/citruk.jpg" alt="Citruk" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class='fas fa-image'></i>';">
+
                 </div>
+
                 <div class="card-body">
+
                     <h3>CITRUK</h3>
+
                     <p>Sejarah · Budaya · Proses</p>
+
                 </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="card">
+
+            </a>
+
+
+
+            <!-- target="_blank" SUDAH DIHAPUS -->
+
+            <a href="soto-pataruman.html" class="card">
+
                 <div class="card-img">
-                    <!-- GANTI src DENGAN GAMBAR ANDA -->
-                    <img src="img/soto.jpg" alt="Soto Pataruman" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-image\'></i>';">
+
+                    <img src="img/soto.jpg" alt="Soto Pataruman" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class='fas fa-image'></i>';">
+
                 </div>
+
                 <div class="card-body">
+
                     <h3>SOTO PATARUMAN</h3>
+
                     <p>Sejarah · Budaya · Proses</p>
+
                 </div>
-            </div>
-            <!-- Card 3 (Tambahan agar sesuai desain ada 4) -->
-            <div class="card">
+
+            </a>
+
+
+
+            <!-- target="_blank" SUDAH DIHAPUS -->
+
+            <a href="oncom-benhil.html" class="card">
+
                 <div class="card-img">
-                    <img src="img/nasi-liwet.jpg" alt="Nasi Liwet" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-image\'></i>';">
+
+                    <img src="img/tutug.jpg" alt="Nasi tutug oncom Benhil" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class='fas fa-image'></i>';">
+
                 </div>
+
                 <div class="card-body">
-                    <h3>NASI LIWET</h3>
+
+                    <h3>Nasi Tutug Oncom Benhil</h3>
+
                     <p>Sejarah · Budaya · Proses</p>
+
                 </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="card">
+
+            </a>
+
+
+
+            <!-- target="_blank" SUDAH DIHAPUS -->
+
+            <a href="ss-bojong-ibu-momoh.html" class="card">
+
                 <div class="card-img">
-                    <img src="img/colenak.jpg" alt="Colenak" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-image\'></i>';">
+
+                    <img src="img/momoh.jpg" alt="es bojong ibu momoh" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class='fas fa-image'></i>';">
+
                 </div>
+
                 <div class="card-body">
-                    <h3>COLENAK</h3>
+
+                    <h3>Es Bojong Bu Momoh</h3>
+
                     <p>Sejarah · Budaya · Proses</p>
+
                 </div>
-            </div>
+
+            </a>
+
+
+
+            <!-- target="_blank" SUDAH DIHAPUS -->
+
+            <a href="cilok-goang.html" class="card">
+
+                <div class="card-img">
+
+                    <img src="img/goang.jpg" alt="Cilok Goang" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class='fas fa-image'></i>';">
+
+                </div>
+
+                <div class="card-body">
+
+                    <h3>Cilok Goang</h3>
+
+                    <p>Sejarah · Budaya · Proses</p>
+
+                </div>
+
+            </a>
+
         </div>
+
     </section>
 
-    <!-- SECTION PETA -->
-    <section id="peta" class="map-section">
-        <h2>Peta Gastronomi</h2>
-        <p>Temukan lokasi persebaran makanan khas Kabupaten Tasikmalaya.</p>
-        <div class="map-container" onclick="window.open('https://www.google.com/maps/search/makanan+khas+tasikmalaya', '_blank')">
-            <i class="fas fa-map map-icon"></i>
-            <span class="map-text">AREA GOOGLE MY MAPS</span>
+
+
+    <!-- SECTION PETA (DUA KOLOM) -->
+
+    <section id="peta" class="map-layout-section">
+
+
+
+        <!-- KOLOM KIRI: PETA -->
+
+        <div class="map-side">
+
+            <iframe 
+
+                src="https://www.google.com/maps/d/embed?mid=1MShfgEUpN61K3mWEexT0UVI0aSVWKHo&ehbc=2E312F" 
+
+                allowfullscreen="" 
+
+                loading="lazy">
+
+            </iframe>
+
         </div>
+
+
+
+        <!-- KOLOM KANAN: KATEGORI & LINK -->
+
+        <div class="category-side">
+
+            <h3>Lokasi Kuliner</h3>
+
+            <div class="category-list">
+
+
+
+                <!-- target="_blank" TETAP ADA KARENA INI LINK EKSTERNAL KE GOOGLE MAPS -->
+
+                <a href="https://maps.app.goo.gl/bz4DZa9FecNhj6tT8?g_st=ic" target="_blank" class="category-item">
+
+                    <span>Citruk Mulyana</span>
+
+                    <i class="fas fa-location-arrow"></i>
+
+                </a>
+
+
+
+                <a href="https://maps.app.goo.gl/rNqHX1HDStEcrHjJ7?g_st=ic" target="_blank" class="category-item">
+
+                    <span>Soto Ayam Pataruman</span>
+
+                    <i class="fas fa-location-arrow"></i>
+
+                </a>
+
+
+
+                <a href="https://maps.app.goo.gl/niBd3ZMnPDaboyze7?g_st=ic" target="_blank" class="category-item">
+
+                    <span>Nasi Tutug Oncom Benhil</span>
+
+                    <i class="fas fa-location-arrow"></i>
+
+                </a>
+
+
+
+                <a href="https://maps.app.goo.gl/tk3Ri4sztfB9kYTM6?g_st=ic" target="_blank" class="category-item">
+
+                    <span>Es Bojong Ibu Momoh</span>
+
+                    <i class="fas fa-location-arrow"></i>
+
+                </a>
+
+
+
+                <a href="https://maps.app.goo.gl/yCVzidPemHFvtcJq6?g_st=ic" target="_blank" class="category-item">
+
+                    <span>Cilok Goang Ona</span>
+
+                    <i class="fas fa-location-arrow"></i>
+
+                </a>
+
+
+
+            </div>
+
+        </div>
+
+
+
     </section>
+
+
 
     <!-- SECTION ULASAN -->
+
     <section id="ulasan" class="review-section">
+
         <div class="review-container">
+
             <div class="review-header">
+
                 <h2>Cerita dari Pengunjung</h2>
+
                 <p>Bagikan pengalamanmu menikmati gastronomi lokal.</p>
+
             </div>
-            
+
+
+
             <form class="review-form" id="reviewForm">
+
                 <div class="stars-input" id="starRating">
+
                     <i class="far fa-star" data-value="1"></i>
+
                     <i class="far fa-star" data-value="2"></i>
+
                     <i class="far fa-star" data-value="3"></i>
+
                     <i class="far fa-star" data-value="4"></i>
+
                     <i class="far fa-star" data-value="5"></i>
+
                 </div>
+
                 <textarea id="reviewText" placeholder="Rating dan ulasan pengunjung akan ditampilkan di sini..." required></textarea>
+
                 <button type="submit" class="btn-submit">BERIKAN ULASAN</button>
+
             </form>
 
-            <!-- Tempat menampilkan ulasan -->
+
+
             <div class="reviews-list" id="reviewsList">
-                <!-- Ulasan akan muncul di sini via JavaScript -->
+
             </div>
+
         </div>
+
     </section>
 
+
+
     <!-- FOOTER -->
+
     <footer>
+
         <h2>SAGARA</h2>
+
         <p>Sistem Akses Gastronomi dan Ragam Asal</p>
+
         <p>Kabupaten Tasikmalaya · Indonesia</p>
+
     </footer>
 
+
+
     <!-- JAVASCRIPT UNTUK ULASAN -->
+
     <script>
-        // --- LOGIKA BINTANG ---
+
         const stars = document.querySelectorAll('#starRating i');
+
         let currentRating = 0;
 
+
+
         stars.forEach(star => {
+
             star.addEventListener('click', () => {
+
                 currentRating = parseInt(star.getAttribute('data-value'));
+
                 updateStars(currentRating);
+
             });
-            // Efek hover
+
             star.addEventListener('mouseover', () => {
+
                 updateStars(parseInt(star.getAttribute('data-value')));
+
             });
+
             star.addEventListener('mouseout', () => {
+
                 updateStars(currentRating);
+
             });
+
         });
 
+
+
         function updateStars(rating) {
+
             stars.forEach(star => {
+
                 const val = parseInt(star.getAttribute('data-value'));
+
                 if (val <= rating) {
+
                     star.classList.remove('far');
+
                     star.classList.add('fas');
+
                 } else {
+
                     star.classList.remove('fas');
+
                     star.classList.add('far');
+
                 }
+
             });
+
         }
 
-        // --- LOGIKA SIMPAN ULASAN ---
+
+
         document.getElementById('reviewForm').addEventListener('submit', function(e) {
+
             e.preventDefault();
-            
+
+
+
             if(currentRating === 0) {
+
                 alert("Silakan pilih bintang terlebih dahulu!");
+
+                return;
+
+            }
+
+
+
+            const text = document.getElementById('reviewText').value.trim();
+
+            if (!text) {
+                alert("Silakan tulis ulasan terlebih dahulu!");
                 return;
             }
 
-            const text = document.getElementById('reviewText').value;
-            
-            // Ambil data dari localStorage
             let reviews = JSON.parse(localStorage.getItem('sagaraReviews')) || [];
-            
-            // Tambah ulasan baru
-            reviews.push({ rating: currentRating, text: text, date: new Date().toLocaleDateString() });
-            
-            // Simpan ke localStorage
+            reviews.push({
+                id: (window.crypto && crypto.randomUUID)
+                    ? crypto.randomUUID()
+                    : 'review-' + Date.now() + '-' + Math.random().toString(16).slice(2),
+                rating: currentRating,
+                text: text,
+                date: new Date().toLocaleDateString()
+            });
             localStorage.setItem('sagaraReviews', JSON.stringify(reviews));
 
-            // Reset form
+
+
             document.getElementById('reviewText').value = '';
+
             currentRating = 0;
+
             updateStars(0);
 
-            // Tampilkan ulasan
+
+
             displayReviews();
+
             alert("Terima kasih! Ulasan Anda telah disimpan.");
+
         });
 
-        // --- TAMPILKAN ULASAN ---
+
+
         function displayReviews() {
             const list = document.getElementById('reviewsList');
-            list.innerHTML = ''; // Kosongkan dulu
-            
+            list.innerHTML = '';
+
             let reviews = JSON.parse(localStorage.getItem('sagaraReviews')) || [];
-            
-            if(reviews.length === 0) {
+
+            // Tambahkan ID untuk ulasan lama yang dibuat sebelum fitur hapus tersedia.
+            let updated = false;
+            reviews.forEach((review, index) => {
+                if (!review.id) {
+                    review.id = 'legacy-' + Date.now() + '-' + index;
+                    updated = true;
+                }
+            });
+
+            if (updated) {
+                localStorage.setItem('sagaraReviews', JSON.stringify(reviews));
+            }
+
+            if (reviews.length === 0) {
                 list.innerHTML = '<p style="font-size:14px; color:#777;">Belum ada ulasan. Jadilah yang pertama!</p>';
                 return;
             }
 
-            // Tampilkan dari yang terbaru
-            reviews.reverse().forEach(review => {
-                const starsHTML = '<i class="fas fa-star"></i>'.repeat(review.rating);
+            [...reviews].reverse().forEach(review => {
                 const item = document.createElement('div');
                 item.className = 'review-item';
-                item.innerHTML = `
-                    <div class="stars">${starsHTML}</div>
-                    <div class="text">${review.text}</div>
-                    <div style="font-size:10px; color:#999; margin-top:5px;">${review.date}</div>
-                `;
+
+                const header = document.createElement('div');
+                header.className = 'review-item-header';
+
+                const starsContainer = document.createElement('div');
+                starsContainer.className = 'stars';
+                starsContainer.textContent = '★'.repeat(
+                    Math.max(0, Math.min(5, Number(review.rating) || 0))
+                );
+
+                const deleteButton = document.createElement('button');
+                deleteButton.type = 'button';
+                deleteButton.className = 'btn-delete-review';
+                deleteButton.textContent = 'Hapus';
+                deleteButton.setAttribute('aria-label', 'Hapus ulasan ini');
+                deleteButton.addEventListener('click', () => deleteReview(review.id));
+
+                header.appendChild(starsContainer);
+                header.appendChild(deleteButton);
+
+                const reviewText = document.createElement('div');
+                reviewText.className = 'text';
+                reviewText.textContent = review.text || '';
+
+                const date = document.createElement('div');
+                date.style.cssText = 'font-size:10px; color:#999; margin-top:5px;';
+                date.textContent = review.date || '';
+
+                item.appendChild(header);
+                item.appendChild(reviewText);
+                item.appendChild(date);
                 list.appendChild(item);
             });
         }
 
-        // Jalankan saat halaman dimuat
+        function deleteReview(reviewId) {
+            const confirmed = confirm('Yakin ingin menghapus ulasan ini?');
+            if (!confirmed) return;
+
+            let reviews = JSON.parse(localStorage.getItem('sagaraReviews')) || [];
+            reviews = reviews.filter(review => review.id !== reviewId);
+
+            localStorage.setItem('sagaraReviews', JSON.stringify(reviews));
+            displayReviews();
+        }
+
         displayReviews();
 
-        // --- SMOOTH SCROLL UNTUK MENU NAVIGASI ---
+
+
         document.querySelectorAll('nav a').forEach(anchor => {
+
             anchor.addEventListener('click', function(e) {
+
                 e.preventDefault();
+
                 const targetId = this.getAttribute('href');
+
                 document.querySelector(targetId).scrollIntoView({
+
                     behavior: 'smooth'
+
                 });
+
             });
+
         });
+
     </script>
+
 </body>
+
 </html>
